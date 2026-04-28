@@ -1,0 +1,7 @@
+[
+  {
+    "service": "checkout-service",
+    "constraint": "Avoid Friday deploys after 4 PM",
+    "severity": "medium"
+  }
+]

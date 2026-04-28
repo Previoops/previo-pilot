@@ -1,0 +1,8 @@
+[
+  {
+    "service": "checkout-service",
+    "severity": "high",
+    "summary": "Payment latency spike after deployment",
+    "recommendation": "Use canary rollout and monitor p95 latency"
+  }
+]

@@ -1,0 +1,27 @@
+name: Previo Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  previo-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Previo
+        env:
+          GITHUB_TOKEN: ${{ secrets.PREVIO_INSTALL_TOKEN }}
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/Previoops/Previo/main/install.sh | bash
+
+      - name: Run Previo
+        env:
+          PREVIO_API_KEY: ${{ secrets.PREVIO_API_KEY }}
+          PREVIO_CUSTOMER_ID: acme
+          PREVIO_EVENTS_URL: https://api.previoops.com/pilot/events
+        run: previo check
