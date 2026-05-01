@@ -56,9 +56,12 @@ inside your pipeline.
 1. Add Previo to your pipeline using one of the examples in examples/
 2. Configure environment variables:
 
-PREVIO_API_KEY=your_key
-PREVIO_CUSTOMER_ID=your_customer_id
-PREVIO_EVENTS_URL=https://api.previoops.com/pilot/events
+     PREVIO_API_KEY=your_key
+
+     PREVIO_CUSTOMER_ID=your_customer_id
+
+     PREVIO_EVENTS_URL=https://api.previoops.com/pilot/events
+     
 
 3. Run your pipeline
 4. Review Previo advisories in CI logs
