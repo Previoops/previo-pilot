@@ -22,6 +22,7 @@ Previo runs as a CLI inside your existing deployment pipeline.
 
 ```bash
 previo check
+```
 
 During a deployment, Previo evaluates available context and surfaces relevant advisories only when signal exists.
 
@@ -45,6 +46,7 @@ For other systems, simply run:
 
 ```bash
 previo check
+```
 
 inside your pipeline.
 
