@@ -20,6 +20,7 @@ It does **not** contain Previo source code.
 
 Previo runs as a CLI inside your existing deployment pipeline.
 
+```md
 ```bash
 previo check
 
@@ -43,7 +44,8 @@ GitHub Actions is provided as an example integration in this repo.
 
 For other systems, simply run:
 
-``` Bash
+
+```bash
 previo check
 
 inside your pipeline.
