@@ -53,18 +53,45 @@ inside your pipeline.
 
 ## Quick Start
 
-1. Add Previo to your pipeline using one of the examples in examples/
-2. Configure environment variables:
+Get Previo running in your pipeline in under 3 minutes.
 
-     PREVIO_API_KEY=your_key
+### 1. Add one line to your pipeline
 
-     PREVIO_CUSTOMER_ID=your_customer_id
+```bash
+previo check
+```
 
-     PREVIO_EVENTS_URL=https://api.previoops.com/pilot/events
-     
+2. Set environment variables
+
+```bash
+PREVIO_API_KEY=your_api_key
+PREVIO_CUSTOMER_ID=your_customer_id
+PREVIO_EVENTS_URL=https://api.previoops.com/pilot/events
+```
+
 
 3. Run your pipeline
+
+   Previo will:
+
+   * Stay silent if no relevant context exists
+   * Surface advisory only when signal is detected
+
+
 4. Review Previo advisories in CI logs
+
+Example Output
+
+```bash
+⚠️ Previo found relevant operational context
+
+Service: payments-api
+Severity: high
+Prior Incident: Latency spike after deployment
+Recommendation: Use canary deploy and monitor latency
+```
+
+
 
 ## Optional Context (Not Required)
 
